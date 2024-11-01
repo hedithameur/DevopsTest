@@ -13,8 +13,12 @@ pipeline {
           
             }
         }
+		stage('GIT') {
+		steps {
+			echo 'Getting Project from Git'
+			url : 'https://github.com/hedithameur/DevopsTest.git'
+		}
+		}
     
     }
-    
-
 }
