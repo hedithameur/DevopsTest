@@ -13,5 +13,12 @@ pipeline {
           
             }
         }
+		stage('Scan'){
+			steps {
+				withSonarQubeEnv(installationName: 'station-ski-project'){
+					sh './mvnw clean sonar:sonar'
+				}
+			}
+		}
     }
 }
