@@ -31,8 +31,6 @@ public class Instructor implements Serializable {
 	LocalDate dateOfHire;
 	@OneToMany
 	Set<Course> courses;
-
-
-	public void setName(String hediThameur) {
-	}
+	@Setter
+	private String name;
 }
